@@ -23,20 +23,20 @@ setTimeout( function(){
   }
 
   alert("Hai indovinato " + listaNumeri.length + " numeri");
-   console.log(listaNumeri);
+
 }, 1000 );
 
 
 // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
 var listaNumeri= [];
 
-for (var i = 0; i < arr.length; i++){
+for (var i = 0; i < numeroUtente.length; i++){
 
-  if (numeroUtente == arr[i]){
-    listaNumeri.push(arr);
+  if (arr.includes(numeroUtente[i]))
+  {
+    listaNumeri.push(numeroUtente[i]);
   }
 }
-
 
 
 }
