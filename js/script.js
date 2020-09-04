@@ -1,13 +1,19 @@
+// start
+$(document).ready(
+  function (){
+
 // 1 Un alert espone 5 numeri casuali diversi.
-var arrey = [];
-while(arrey.length < 5){
+var arr = [];
+while(arr.length < 5){
     var numeroRandom = Math.floor(Math.random() * 100) + 1;
-    if(arrey.indexOf(numeroRandom) === -1) arrey.push(numeroRandom);
+    if(arr.indexOf(numeroRandom) === -1) arr.push(numeroRandom);
 }
-  alert(arrey);
+  alert(arr);
+  console.log(arr);
 
 
 // Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
+var numeroUtente = [];
 setTimeout( function(){
   var i = 0;
   while (i < 5) {
@@ -15,7 +21,23 @@ setTimeout( function(){
     i++;
     console.log(numeroUtente);
   }
-}, 30000 );
+
+  alert("Hai indovinato " + listaNumeri.length + " numeri");
+   console.log(listaNumeri);
+}, 1000 );
 
 
 // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
+var listaNumeri= [];
+
+for (var i = 0; i < arr.length; i++){
+
+  if (numeroUtente == arr[i]){
+    listaNumeri.push(arr);
+  }
+}
+
+
+
+}
+);
