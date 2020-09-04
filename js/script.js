@@ -18,25 +18,25 @@ var numeroUtente = [];
 
 setTimeout( function(){
 
-  var numeriUtente = [];
+  var listaUtente = [];
 
   var i = 0;
   while (i < 5) {
     var numeroUtente = parseInt(prompt ("Inserisci i numeri che hai visualizzato"));
     i++;
 
-    numeriUtente.push(numeroUtente);
+    listaUtente.push(numeroUtente);
   }
 
   // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
 
   var right =[];
 
-  for (var i = 0; i < numeriUtente.length; i++){
+  for (var i = 0; i < listaUtente.length; i++){
 
-    if (arr.includes(numeriUtente[i]))
+    if (arr.includes(listaUtente[i]))
     {
-      right.push(numeriUtente[i]);
+      right.push(listaUtente[i]);
     }
   }
 
