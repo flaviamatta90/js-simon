@@ -13,30 +13,36 @@ while(arr.length < 5){
 
 
 // Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
-// Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
 
 var numeroUtente = [];
-var listaNumeri= [];
 
 setTimeout( function(){
+
+  var numeriUtente = [];
+
   var i = 0;
   while (i < 5) {
     var numeroUtente = parseInt(prompt ("Inserisci i numeri che hai visualizzato"));
     i++;
-    console.log(numeroUtente);
+
+    numeriUtente.push(numeroUtente);
   }
 
-  for (var i = 0; i < numeroUtente.length; i++){
+  // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
 
-    if (arr.includes(numeroUtente[i]))
+  var right =[];
+
+  for (var i = 0; i < numeriUtente.length; i++){
+
+    if (arr.includes(numeriUtente[i]))
     {
-      listaNumeri.push(numeroUtente[i]);
+      right.push(numeriUtente[i]);
     }
   }
 
-  alert("Hai indovinato " + listaNumeri.length + " numeri");
+  alert("Hai indovinato " + right.length + " numer*");
 
-}, 1000 );
+}, 30000 );
 
 
 
